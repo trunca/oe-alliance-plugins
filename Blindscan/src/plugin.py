@@ -24,7 +24,7 @@ from Tools.Directories import resolveFilename
 from enigma import eTimer, eDVBFrontendParametersSatellite, eComponentScan, eDVBSatelliteEquipmentControl, eDVBFrontendParametersTerrestrial, eDVBFrontendParametersCable, eConsoleAppContainer, eDVBResourceManager
 
 import os
-from boxbranding import getBoxType, getImageVersion, getImageBuild, getBrandOEM
+from SFtoolbox import getBoxType, getImageVersion, getImageBuild, getBrandOEM
 versionstring = getImageVersion()
 buildstring = getImageBuild()
 boxtype = getBoxType()
