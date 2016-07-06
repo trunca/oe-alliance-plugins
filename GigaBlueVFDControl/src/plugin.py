@@ -10,7 +10,7 @@ from Components.config import config, configfile, ConfigSubsection, ConfigEnable
 from Components.ConfigList import ConfigListScreen, ConfigList
 from Tools.Directories import resolveFilename, SCOPE_PLUGINS
 from enigma import iPlayableService, eServiceCenter, eTimer, eActionMap
-from boxbranding import getBoxType, getImageDistro
+from SFtoolbox import getBoxType, getImageDistro
 from os import system
 from Plugins.Plugin import PluginDescriptor
 from Components.ServiceEventTracker import ServiceEventTracker
@@ -484,7 +484,7 @@ class LED_Giga:
 	config.misc.standbyCounter.addNotifier(standbyCounterChanged, initial_call = False)
 
 def main(menuid, **kwargs):
-	if getImageDistro() == "openvix":
+	if getImageDistro() == "sfteam":
 		if BOX in ('gb800se', 'gb800solo', 'gbx1', 'gbx3') and menuid == "leddisplay":
 			return [(_("Display/LED"), startLED, "LED_Giga", None)]
 		elif BOX in ('gb800seplus', 'gbultra', 'gbultrase') and menuid == "display":
